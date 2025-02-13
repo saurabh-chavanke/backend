@@ -84,7 +84,7 @@ def process_fundus_image(image, original_image):
         if compactness > 1 and eccentricity < 0.9:
             hemorrhage_count += 1
             minr, minc, maxr, maxc = prop.bbox
-            cv2.rectangle(detection_img, (minc, minr), (maxc, maxr), (255, 255, 0), 2)  # Red boxes
+            cv2.rectangle(detection_img, (minc, minr), (maxc, maxr), (255, 255, 0), 2) 
 
     steps.append({"step": "Final Detection", "image": encode_image(detection_img)})
 
